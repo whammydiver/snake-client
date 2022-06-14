@@ -6,12 +6,18 @@ const connect = function () {
     host: 'localhost',
     port: 50541
 
-  });
-
+  })
+  
   // interpret incoming data as text
   conn.setEncoding("utf8");
+  
+  conn.on('connect', () => {
+    console.log('Successfully connected to the snake server');
+  })
 
-    // client.js
+
+  conn.write('Name: PIT');
+  
   conn.on("data", (data) => {
     console.log("Server says: ", data);
   });
