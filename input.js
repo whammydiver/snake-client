@@ -1,9 +1,9 @@
-const { connect } = require("./client");
+//const { connect } = require("./client");
 const { movesAndSmackTalk } = require("./constants");
 
 let connection;
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
