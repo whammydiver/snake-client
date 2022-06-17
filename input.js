@@ -1,4 +1,3 @@
-//const { connect } = require("./client");
 const { movesAndSmackTalk } = require("./constants");
 
 let connection;
@@ -11,7 +10,6 @@ const handleUserInput = function(key) {
   if (key in movesAndSmackTalk) {
     connection.write(`${movesAndSmackTalk[key]}`);
   }
-
 };
 
 const setupInput = (conn) => {
